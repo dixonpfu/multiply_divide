@@ -1,0 +1,125 @@
+<html>
+<head>
+	<title>Провірка множення та ділення</title>
+	<meta charset="UTF-8">
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="code.js"></script>
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<link type="text/css" href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<div id="tabs">	
+		<ul>
+			<li><a href="#multiply_tab">Провірка множення</a></li>
+			<li><a href="#divide_tab">Провірка ділення</a></li>
+			<li><a href="#results">Результати</a></li>
+			<li><a href="#table">Таблиця множення</a></li>
+		</ul>
+		<div id="multiply_tab">
+			<div class="select_number">
+				<h1>Виберіть множник:</h1>
+				<table>
+					<tr>
+						<td><button id="multiply_by-2" class="multiplier">× 2</button></td>
+						<td><button id="multiply_by-3" class="multiplier">× 3</button></td>
+						<td><button id="multiply_by-4" class="multiplier">× 4</button></td>
+						<td><button id="multiply_by-5" class="multiplier">× 5</button></td>
+						<td><button id="multiply_by-6" class="multiplier">× 6</button></td>
+						<td><button id="multiply_by-7" class="multiplier">× 7</button></td>
+						<td><button id="multiply_by-8" class="multiplier">× 8</button></td>
+						<td><button id="multiply_by-9" class="multiplier">× 9</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="question_section">
+				<h1>Скільки буде?</h1>
+				<h2><span class="question"></span><input class="result" type="text" style="width: 50px;">&nbsp;<button class="check_answer">Перевірити відповідь</button></h2>
+				<h2><div class="display_result"></div></h2>
+				<br>
+				<button class="back">Вибір множника</button>
+			</div>
+		</div>
+		<div id="divide_tab">
+			<div class="select_number">
+				<h1>Виберіть дільник:</h1>
+				<table>
+					<tr>
+						<td><button id="divide_by-2" class="divider">: 2</button></td>
+						<td><button id="divide_by-3" class="divider">: 3</button></td>
+						<td><button id="divide_by-4" class="divider">: 4</button></td>
+						<td><button id="divide_by-5" class="divider">: 5</button></td>
+						<td><button id="divide_by-6" class="divider">: 6</button></td>
+						<td><button id="divide_by-7" class="divider">: 7</button></td>
+						<td><button id="divide_by-8" class="divider">: 8</button></td>
+						<td><button id="divide_by-9" class="divider">: 9</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="question_section">
+				<h1>Скільки буде?</h1>
+				<h2><span class="question"></span><input class="result" type="text" style="width: 50px;">&nbsp;<button class="check_answer">Перевірити відповідь</button></h2>
+				<h2><div class="display_result"></div></h2>
+				<br>
+				<button class="back">Вибір дільника</button>
+			</div>
+		</div>
+		<div id="results">
+			<table id="results_list">
+			</table>
+			<br>
+			<span id="error_count"></span>
+			<br>
+			<span id="total_count"></span>
+		</div>
+		<div id="table">
+			<table class="multiply_table">
+				<tr class="header_row">
+					<td><b>× 1</b></td>
+					<td><b>× 2</b></td>
+					<td><b>× 3</b></td>
+					<td><b>× 4</b></td>
+					<td><b>× 5</b></td>
+					<td><b>× 6</b></td>
+					<td><b>× 7</b></td>
+					<td><b>× 8</b></td>
+					<td><b>× 9</b></td>
+					<td><b>× 10</b></td>
+				</tr>
+				<tr>
+					<td>1 × 1 = 1</td><td>2 × 1 = 2</td><td>3 × 1 = 3</td><td>4 × 1 = 4</td><td>5 × 1 = 5</td><td>6 × 1 = 6</td><td>7 × 1 = 7</td><td>8 × 1 = 8</td><td>9 × 1 = 9</td><td>10 × 1 = 10</td>
+				</tr>
+				<tr>
+					<td>1 × 2 = 2</td><td>2 × 2 = 4</td><td>3 × 2 = 6</td><td>4 × 2 = 8</td><td>5 × 2 = 10</td><td>6 × 2 = 12</td><td>7 × 2 = 14</td><td>8 × 2 = 16</td><td>9 × 2 = 18</td><td>10 × 2 = 20</td>
+				</tr>
+				<tr>
+					<td>1 × 3 = 3</td><td>2 × 3 = 6</td><td>3 × 3 = 9</td><td>4 × 3 = 12</td><td>5 × 3 = 15</td><td>6 × 3 = 18</td><td>7 × 3 = 21</td><td>8 × 3 = 24</td><td>9 × 3 = 27</td><td>10 × 3 = 30</td>
+				</tr>
+				<tr>
+					<td>1 × 4 = 4</td><td>2 × 4 = 8</td><td>3 × 4 = 12</td><td>4 × 4 = 16</td><td>5 × 4 = 20</td><td>6 × 4 = 24</td><td>7 × 4 = 28</td><td>8 × 4 = 32</td><td>9 × 4 = 36</td><td>10 × 4 = 40</td>
+				</tr>
+				<tr>
+					<td>1 × 5 = 5</td><td>2 × 5 = 10</td><td>3 × 5 = 15</td><td>4 × 5 = 20</td><td>5 × 5 = 25</td><td>6 × 5 = 30</td><td>7 × 5 = 35</td><td>8 × 5 = 40</td><td>9 × 5 = 45</td><td>10 × 5 = 50</td>
+				</tr>
+				<tr>
+					<td>1 × 6 = 6</td><td>2 × 6 = 12</td><td>3 × 6 = 18</td><td>4 × 6 = 24</td><td>5 × 6 = 30</td><td>6 × 6 = 36</td><td>7 × 6 = 42</td><td>8 × 6 = 48</td><td>9 × 6 = 54</td><td>10 × 6 = 60</td>
+				</tr>
+				<tr>
+					<td>1 × 7 = 7</td><td>2 × 7 = 14</td><td>3 × 7 = 21</td><td>4 × 7 = 28</td><td>5 × 7 = 35</td><td>6 × 7 = 42</td><td>7 × 7 = 49</td><td>8 × 7 = 56</td><td>9 × 7 = 63</td><td>10 × 7 = 70</td>
+				</tr>
+				<tr>
+					<td>1 × 8 = 8</td><td>2 × 8 = 16</td><td>3 × 8 = 24</td><td>4 × 8 = 32</td><td>5 × 8 = 40</td><td>6 × 8 = 48</td><td>7 × 8 = 56</td><td>8 × 8 = 64</td><td>9 × 8 = 72</td><td>10 × 8 = 80</td>
+				</tr>
+				<tr>
+					<td>1 × 9 = 9</td><td>2 × 9 = 18</td><td>3 × 9 = 27</td><td>4 × 9 = 36</td><td>5 × 9 = 45</td><td>6 × 9 = 54</td><td>7 × 9 = 63</td><td>8 × 9 = 72</td><td>9 × 9 = 81</td><td>10 × 9 = 90</td>
+				</tr>
+				<tr>
+					<td>1 × 10 = 10</td><td>2 × 10 = 20</td><td>3 × 10 = 30</td><td>4 × 10 = 40</td><td>5 × 10 = 50</td><td>6 × 10 = 60</td><td>7 × 10 = 70</td><td>8 × 10 = 80</td><td>9 × 10 = 90</td><td>10 × 10 = 100</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="wrap">&nbsp;</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#tabs {
+	height: 100%;
+}
+.results_row {
+	border-style: double;
+}
+#results_list {
+	border: double;
+}
+#results_list tr {
+    border: double;   
+}
+#results_list tr.error {
+    color: red;   
+}
+#error_count {
+	color: red; 
+}
+.multiply_table,
+.multiply_table tr,
+.multiply_table tr td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 8px;
+}
+.header_row {
+	text-align: center;
+}
